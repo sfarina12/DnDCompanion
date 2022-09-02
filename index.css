@@ -47,7 +47,7 @@ number {
     width: 850px;
     height: 700px;
     position: absolute;
-    bottom: 100px;
+    bottom: -72px;
     left: calc(50% - 425px);
 }
 
@@ -57,7 +57,7 @@ number {
     margin-right: auto;
     margin-top:10%;
     background-color: #e6e6e6;
-    width: 80%;
+    width: 60%;
     height: 170px;
     border-radius: 50px;
     text-align: center;
