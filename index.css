@@ -59,4 +59,13 @@ number {
     width: 90%;
     height: 170px;
     border-radius: 100px;
+    text-align: center;
+}
+
+textBtn {
+    font-size: 100px; 
+    font-family: Segoe UI; 
+    color:#6f42a1;
+    margin-top: 10px;
+    line-height: 154px;
 }
