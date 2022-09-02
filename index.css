@@ -24,23 +24,23 @@ body { margin: 0; background-color: #7a4cad; overflow: hidden;}
     position: absolute; 
     background-color: transparent; 
     /*box-shadow: inset 0 -400px 100px -100px #7a4cad;*/
+    text-align: center;
 }
 
 .logo {
-    display: block;
     margin-left: auto;
     margin-right: auto; 
     width: 90%;
     height: 90%;  
+    
 }
 
 number {
-    font-size: 200px; 
+    font-size: 267px; 
     font-family: Segoe UI; 
     color:#6f42a1;
-    position:relative; 
-    top: -450px; 
-    left:223px;
+    display: block;
+    margin-top:-357px;
 }
 
 #buttonsContainer {
