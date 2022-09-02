@@ -1,4 +1,4 @@
-body { margin: 0; background-color: #7a4cad; }
+body { margin: 0; background-color: #7a4cad; overflow: hidden;}
 
 #mainContainer {
     background-color: #7a4cad;
