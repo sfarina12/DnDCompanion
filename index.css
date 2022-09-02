@@ -1,4 +1,4 @@
-body { margin: 0; background-color: #7a4cad; overflow: hidden;}
+body { margin: 0; background-color: #7a4cad; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
 #mainContainer {
     background-color: #7a4cad;
@@ -32,12 +32,10 @@ body { margin: 0; background-color: #7a4cad; overflow: hidden;}
     margin-right: auto; 
     width: 90%;
     height: 90%;  
-    
 }
 
 number {
     font-size: 267px; 
-    font-family: Segoe UI; 
     color:#6f42a1;
     display: block;
     margin-top:-357px;
@@ -66,7 +64,6 @@ number {
 
 textBtn {
     font-size: 60px; 
-    font-family: Segoe UI; 
     color:#6f42a1;
     margin-top: 10px;
     line-height: 159px;
@@ -78,7 +75,6 @@ a {
 
 mainText {
     font-size: 68px; 
-    font-family: Segoe UI; 
     color:white;
     margin-top: 10px;
 }
