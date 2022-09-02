@@ -1,0 +1,57 @@
+body { margin: 0; background-color: #7a4cad; }
+
+#mainContainer {
+    background-color: #7a4cad;
+    width: 100%;
+    height: 100%;
+}
+
+#logoContainer {
+    background-color: #6f42a1;
+    width: 750px; 
+    height: 750px; 
+    position: absolute; 
+    left: calc(50% - 375px); 
+    top: 20%;
+    border-radius: 50%;
+}
+
+#logoContainerShadow{
+    width: 750px; 
+    height: 750px;
+    position: absolute; 
+    background-color: transparent; 
+    box-shadow: inset 0 -400px 100px -100px #7a4cad;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; margin-top:10%;
+    width: 90%;
+    height: 90%;  
+}
+
+number {
+    font-size: 200px; font-family: Segoe UI; color:#6f42a1;
+    position:relative; top: -490px; left:270px;
+}
+
+#buttonsContainer {
+    width: 850px;
+    height: 700px;
+    position: absolute;
+    bottom: 100px;
+    left: calc(50% - 425px);
+}
+
+.btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10%;
+    background-color: #e6e6e6;
+    width: 90%;
+    height: 170px;
+    border-radius: 100px;
+}
