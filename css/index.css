@@ -8,8 +8,20 @@ body { background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,7,0,1) 35%, r
 #startBtn { background-color: #b86916; border-radius: 50px; box-shadow: 0px 12px 22px 3px #1f1205; margin-top: 100px; width: 180px; height: 48px; }
 txt { color: white; font-size: 25px; position: relative; left: 16px; top: 12px; }
 
-/*mobile*/
+/*mobile 1*/
 @media screen and (min-width: 320px) {
+    #containerBottom { bottom: 190px; }
+    #logo { width: 90%; height: 90%; }
+    #appTitle { font-size: 100px; width: 80%; }
+    #addDesc { font-size: 55px; margin-top: 45px; width: 80%; }
+    #startBtn { margin-top: 300px; width: 400px; height: 100px; }
+    txt { font-size: 55px;
+        left: 26px;
+        top: 18px; }
+}
+
+/*mobile 2*/
+@media (max-width: 767px)  {
     #containerBottom { bottom: 190px; }
     #logo { width: 90%; height: 90%; }
     #appTitle { font-size: 100px; width: 80%; }
