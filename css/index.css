@@ -1,0 +1,67 @@
+@font-face {
+    font-family: DarkFont;
+    src: url('../Fonts/OptimusPrinceps.ttf') format('truetype');
+}
+
+body {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,7,0,1) 35%, rgba(24,10,0,1) 100%);
+    margin: 0;
+}
+
+#logo {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#logo img {
+    width: 100%;
+    height: auto;
+}
+
+#containerBottom {
+    position: absolute;
+    bottom: 120px;
+    width: 100%;
+}
+
+#appTitle {
+    color: #b86916;
+    font-family: DarkFont;
+    font-weight: bold;
+    font-size: 50px;
+
+    margin: auto;
+    vertical-align: bottom;
+    width: 430px;
+}
+
+#addDesc {
+    color: #92591c;
+    font-family: DarkFont;
+    font-size: 20px;
+
+    margin: auto;
+    margin-top: 15px;
+    width: 430px;
+}
+
+#startBtn {
+    background-color: #b86916;
+    border-radius: 50px;
+    box-shadow: 0px 12px 22px 3px #1f1205;
+
+    margin-top: 100px;
+    width: 180px;
+    height: 48px;
+}
+
+txt {
+    color: white;
+    font-size: 25px;
+    position: relative;
+    left: 16px;
+    top: 12px;
+}
