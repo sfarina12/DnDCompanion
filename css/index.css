@@ -1,103 +1,75 @@
-@font-face { font-family: DarkFont; src: url('../Fonts/OptimusPrinceps.ttf') format('truetype'); }
-body { background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,7,0,1) 35%, rgba(32,13,0,1) 100%); margin: 0; }
-#logo { width: 400px; height: 400px; margin: auto; margin-top: 50px; }
-#logo img { width: 100%; height: auto; }
-#containerBottom { position: absolute; bottom: 120px; width: 100%; }
-#appTitle { color: #b86916; font-family: DarkFont; font-weight: bold; font-size: 50px; margin: auto; vertical-align: bottom; width: 430px; }
-#addDesc { color: #92591c; font-family: DarkFont; font-size: 20px; margin: auto; margin-top: 15px; width: 430px; } 
-#startBtn { background-color: #b86916; border-radius: 50px; box-shadow: 0px 12px 22px 3px #1f1205; margin-top: 100px; width: 180px; height: 48px; }
-txt { color: white; font-size: 25px; position: relative; left: 16px; top: 12px; }
-
-/*mobile 1*/
-@media screen and (min-width: 320px) {
-    #containerBottom { bottom: 190px; }
-    #logo { width: 90%; height: 90%; }
-    #appTitle { font-size: 100px; width: 80%; }
-    #addDesc { font-size: 55px; margin-top: 45px; width: 80%; }
-    #startBtn { margin-top: 150px; width: 400px; height: 100px; }
-    txt { font-size: 55px;
-        left: 26px;
-        top: 18px; }
+@font-face {
+    font-family: DarkFont;
+    src: url('../Fonts/OptimusPrinceps.ttf') format('truetype');
 }
 
-/*mobile 2*/
-@media (max-width: 767px)  {
+body {
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,7,0,1) 35%, rgba(24,10,0,1) 100%);
+    margin: 0;
+}
+
+#logo {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#logo img {
+    width: 100%;
+    height: auto;
+}
+
+#containerBottom {
+    position: absolute;
+    bottom: 120px;
+    width: 100%;
+}
+
+#appTitle {
+    color: #b86916;
+    font-family: DarkFont;
+    font-weight: bold;
+    font-size: 50px;
+
+    margin: auto;
+    vertical-align: bottom;
+    width: 430px;
+}
+
+#addDesc {
+    color: #92591c;
+    font-family: DarkFont;
+    font-size: 20px;
+
+    margin: auto;
+    margin-top: 15px;
+    width: 430px;
+}
+
+#startBtn {
+    background-color: #b86916;
+    border-radius: 50px;
+    box-shadow: 0px 12px 22px 3px #1f1205;
+
+    margin-top: 100px;
+    width: 180px;
+    height: 48px;
+}
+
+txt {
+    color: white;
+    font-size: 25px;
+    position: relative;
+    left: 16px;
+    top: 12px;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
     #containerBottom { bottom: 190px; }
     #logo { width: 90%; height: 90%; }
     #appTitle { font-size: 100px; width: 80%; }
     #addDesc { font-size: 55px; margin-top: 45px; width: 80%; }
     #startBtn { margin-top: 300px; width: 400px; height: 100px; }
-    txt { font-size: 55px;
-        left: 26px;
-        top: 18px; }
-}
-
-/*desktop*/
-@media (min-width: 1025px) {
-    @font-face {
-        font-family: DarkFont;
-        src: url('../Fonts/OptimusPrinceps.ttf') format('truetype');
-    }
-    
-    body {
-        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,7,0,1) 35%, rgba(24,10,0,1) 100%);
-        margin: 0;
-    }
-    
-    #logo {
-        width: 400px;
-        height: 400px;
-        margin: auto;
-        margin-top: 50px;
-    }
-    
-    #logo img {
-        width: 100%;
-        height: auto;
-    }
-    
-    #containerBottom {
-        position: absolute;
-        bottom: 120px;
-        width: 100%;
-    }
-    
-    #appTitle {
-        color: #b86916;
-        font-family: DarkFont;
-        font-weight: bold;
-        font-size: 50px;
-    
-        margin: auto;
-        vertical-align: bottom;
-        width: 430px;
-    }
-    
-    #addDesc {
-        color: #92591c;
-        font-family: DarkFont;
-        font-size: 20px;
-    
-        margin: auto;
-        margin-top: 15px;
-        width: 430px;
-    }
-    
-    #startBtn {
-        background-color: #b86916;
-        border-radius: 50px;
-        box-shadow: 0px 12px 22px 3px #1f1205;
-    
-        margin-top: 100px;
-        width: 180px;
-        height: 48px;
-    }
-    
-    txt {
-        color: white;
-        font-size: 25px;
-        position: relative;
-        left: 16px;
-        top: 12px;
-    }
+    txt { font-size: 55px; left: 26px; top: 18px; }
 }
