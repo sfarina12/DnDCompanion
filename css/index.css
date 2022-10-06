@@ -4,7 +4,6 @@
 }
 
 body {
-    background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,7,0,1) 35%, rgba(24,10,0,1) 100%);
     margin: 0;
 }
@@ -66,7 +65,7 @@ txt {
     top: 12px;
 }
 
-@media (max-width: 1080px) {
+/*@media (max-width: 1080px) {
     #containerBottom { bottom: 190px; }
     #logo { width: 90%; height: 90%; }
     #appTitle { font-size: 100px; width: 80%; }
@@ -75,8 +74,4 @@ txt {
     txt { font-size: 55px;
         left: 26px;
         top: 18px; }
-}
-
-@media (max-height: 2280px) {
-    #containerBottom { background-color: red;}
-}
+}*/
