@@ -65,10 +65,10 @@ txt {
     top: 12px;
 }
 
-@media (max-width: 896) {
+@media only screen and (max-width: 425px) {
     #containerBottom { bottom: 190px; }
     #logo { width: 120%; height: 120%; }
-    #appTitle { font-size: 100px; width: 80%; }
+    #appTitle { font-size: 100px; width: 80%;  }
     #addDesc { font-size: 55px; margin-top: 45px; width: 80%; }
     #startBtn { margin-top: 300px; width: 400px; height: 100px; }
     txt { font-size: 55px; left: 26px; top: 18px; }
