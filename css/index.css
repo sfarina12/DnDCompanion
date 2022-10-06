@@ -65,7 +65,7 @@ txt {
     top: 12px;
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (max-width: 896) {
     #containerBottom { bottom: 190px; }
     #logo { width: 120%; height: 120%; }
     #appTitle { font-size: 100px; width: 80%; }
