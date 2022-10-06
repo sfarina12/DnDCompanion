@@ -67,7 +67,7 @@ txt {
 
 @media (min-width: 320px) and (max-width: 768px) {
     #containerBottom { bottom: 190px; }
-    #logo { width: 90%; height: 90%; }
+    #logo { width: 120%; height: 120%; }
     #appTitle { font-size: 100px; width: 80%; }
     #addDesc { font-size: 55px; margin-top: 45px; width: 80%; }
     #startBtn { margin-top: 300px; width: 400px; height: 100px; }
