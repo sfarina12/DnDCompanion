@@ -1,5 +1,5 @@
 @font-face { font-family: DarkFont; src: url('../Fonts/OptimusPrinceps.ttf') format('truetype'); }
-body { background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,7,0,1) 35%, rgba(24,10,0,1) 100%); margin: 0; }
+body { background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,7,0,1) 35%, rgba(32,13,0,1) 100%); margin: 0; }
 #logo { width: 400px; height: 400px; margin: auto; margin-top: 50px; }
 #logo img { width: 100%; height: auto; }
 #containerBottom { position: absolute; bottom: 120px; width: 100%; }
