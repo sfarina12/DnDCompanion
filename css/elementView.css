@@ -1,6 +1,6 @@
 @font-face { font-family: DarkFont; src: url('../Fonts/OptimusPrinceps.ttf') format('truetype'); }
 a{ text-decoration: none; }
-body { transition: all .2s; background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,7,0,1) 35%, rgba(24,10,0,1) 100%); margin: 0; font-family: DarkFont; }
+body { overflow: hidden; transition: all .2s; background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,7,0,1) 35%, rgba(24,10,0,1) 100%); margin: 0; font-family: DarkFont; }
 #logo img { width: 100%; height: auto; }
 h2 { color: #b86916; font-family: DarkFont; margin-left: 87px; margin-top: 50px;}
 
@@ -166,5 +166,9 @@ h2 { color: #b86916; font-family: DarkFont; margin-left: 87px; margin-top: 50px;
     }
 
     .dummy_element_category { width: 0px; }
+
+    #wpn {
+        margin-top: -30px;
+    }
 
 }
