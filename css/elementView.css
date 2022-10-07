@@ -135,41 +135,26 @@ h2 { color: #b86916; font-family: DarkFont; margin-left: 87px; margin-top: 50px;
     text-align: center;
  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#startBtn {
-    background-color: #b86916;
-    border-radius: 12px;
-    box-shadow: 0px 8px 90px -8px #864f14;
-
-    margin-top: 100px;
-    width: 180px;
-    height: 48px;
-}
-
-txt {
-    color: white;
-    font-size: 25px;
-    position: relative;
-    left: 16px;
-    top: 12px;
-}
-
 @media only screen and (max-width: 425px) {
-    
+    #logo {
+        width: 90px;
+        height: 90px;
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+
+    h2 { margin-left: 35px;}
+
+    .element_category {
+        width: 170px;
+        height: 70px;
+        margin-left: 22px;
+    }
+
+    .c_name {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .dummy_element_category { width: 0px; }
 }
