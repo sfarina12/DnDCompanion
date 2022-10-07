@@ -7,12 +7,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
-        <div id="logo"> <img src="img/DarkMark.png"> </div>        
+        <a href="index.html"><div id="logo"> <img src="img/DarkMark.png"> </div> </a>
 
         <h2>Categories</h2>
         <div id="container_categories">
             <div class="dummy_element_category"></div>
-            <div class='element_category c_selected'><table class="c_name"><tr><td>categoria</td></tr></table></div>
+            <!--<div class='element_category c_selected'><table class="c_name"><tr><td>categoria</td></tr></table></div>!-->
         </div>
 
         <h2>Weapons</h2>
@@ -23,9 +23,6 @@
 
     <script src="DarkSoulsWeapons.js"></script>
     <script>
-
-        
-
         function addCategoryUI(name)
         {
             $("#container_categories").append("<div class='element_category'><table class='c_name'><tr><td>"+name+"</td></tr></table></div>")
@@ -82,8 +79,13 @@
                 weap_Cont++    
             });
             
+
+            var lastSelected;
             $(".element_category").click(function(){
-                alert("clicked");
+                $(lastSelected).removeClass("c_selected")
+                $(this).addClass("c_selected")
+
+                lastSelected=this
             });            
         });
     </script>
