@@ -94,6 +94,9 @@
                 $(this).addClass("c_selected")
 
                 cat_name=$(this).find("td").html()
+                
+                $("#categories_weapons").empty()
+                $("#categories_weapons").append("<div class='dummy_element_weapon'></div>");
 
                 data.forEach(item => {
                     console.log(item)
