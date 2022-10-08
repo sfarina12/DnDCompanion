@@ -12,29 +12,59 @@
         <h2>Categories</h2>
         <div id="container_categories">
             <div class="dummy_element_category"></div>
-            <!--<div class='element_category c_selected'><table class="c_name"><tr><td>categoria</td></tr></table></div>!-->
         </div>
 
         <h2 id="wpn">Weapons</h2>
         <div id="categories_weapons">
             <div class="dummy_element_weapon"></div>
-            <!--<div class="element_weapon">
+            
+            <!--<div class="element_weapon c_selected">
                 <img class="image_weapon" src="img/holder.jpg">
                 <table class="w_name"><tr><td>moai</td></tr></table>
+                <div class="expanded">
+                    <div class="ext_bor"><img src="img/corner.png"></div>
+                    i'm a text
+                </div>
             </div>!-->
+
         </div>
     </body>
 
     <script src="DarkSoulsWeapons.js"></script>
     <script>
+        isFirst=true;
+        var lastSelected;
+
         function addCategoryUI(name)
         {
             $("#container_categories").append("<div class='element_category'><table class='c_name'><tr><td>"+name+"</td></tr></table></div>")
+
+            if(isFirst)
+            {
+                isFirst=false;
+                selectFirst()
+            }
+        }
+
+        function selectFirst()
+        {
+            $(".element_category").addClass("c_selected")
+
+            cat_name=$(".element_category").find("td").html()
+
+            $("#categories_weapons").empty()
+            $("#categories_weapons").append("<div class='dummy_element_weapon'></div>");
+
+            data.forEach(item => {
+                if(item.category==cat_name) { addWeaponUI(item.image,item.name) }     
+            });
+
+            lastSelected=$(".element_category")
         }
 
         function addWeaponUI(img,name)
         {
-            $("#categories_weapons").append("<div class='element_weapon'> <img class='image_weapon' alt='the link is broken' src="+img+"> <table class='w_name'><tr><td>"+name+"</td></tr></table> </div>")
+            $("#categories_weapons").append("<div class='element_weapon'> <img class='image_weapon' alt='the link is broken' onerror=this.src='img/ater.png' src="+img+"> <table class='w_name'><tr><td>"+name+"</td></tr></table> </div>")
         }
 
         $("document").ready(function() {
@@ -51,23 +81,19 @@
                 { "name":"Axes", "start":56, "end":61},
                 { "name":"Great Axes", "start":62, "end":66},
                 { "name":"Hammers", "start":67, "end":75},
-                { "name":"Great Hammers", "start":76, "end":82},
-                { "name":"Fist & Claws", "start":83, "end":86},
-                { "name":"Spears", "start":87, "end":96},
-                { "name":"Halberds", "start":97, "end":105},
-                { "name":"Whips", "start":106, "end":109},
-                { "name":"Bows", "start":110, "end":114},
-                { "name":"Greatbows", "start":115, "end":116},
-                { "name":"Crossbows", "start":117, "end":120},
-                { "name":"Catalysts", "start":121, "end":122},
-                { "name":"Flames", "start":123, "end":133},
-                { "name":"Talismans", "start":134, "end":140}
+                { "name":"Great Hammers", "start":76, "end":80},
+                { "name":"Fist & Claws", "start":81, "end":85},
+                { "name":"Spears", "start":86, "end":95},
+                { "name":"Halberds", "start":96, "end":104},
+                { "name":"Whips", "start":105, "end":107},
+                { "name":"Bows", "start":108, "end":112},
+                { "name":"Greatbows", "start":113, "end":114},
+                { "name":"Crossbows", "start":115, "end":118},
+                { "name":"Flames", "start":119, "end":120},
+                { "name":"Catalysts", "start":121, "end":131},
+                { "name":"Talismans", "start":132, "end":140}
             ]
 
-            categories.forEach(item=>{
-                addCategoryUI(item.name)
-            });
-            
             var weap_Cont=0;
             var act_caty=0;
             data.forEach(dataItem=>{
@@ -87,8 +113,11 @@
                 weap_Cont++    
             });
                     
+            categories.forEach(item=>{
+                addCategoryUI(item.name)
+            });
 
-            var lastSelected;
+            
             $(".element_category").click(function(){
                 $(lastSelected).removeClass("c_selected")
                 $(this).addClass("c_selected")
