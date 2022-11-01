@@ -69,6 +69,15 @@ txt {
     top: 12px;
 }
 
+#switchContainer{
+    background-color: red;
+    width: 100%;
+}
+
+.arrow{
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 425px) {
     #containerBottom { bottom: 50px; }
     #logo { width: 80%; height: 80%; }

@@ -18,15 +18,48 @@
         <div id="categories_weapons">
             <div class="dummy_element_weapon"></div>
             
-            <!--<div class="element_weapon c_selected">
-                <img class="image_weapon" src="img/holder.jpg">
+            <!--<div class="element_weapon">
+                <div style="display: flex;">
+                    <img class="image_weapon" src="img/holder.jpg">
+                    <div class="mainStats">
+                        <div class="stat">attack type<div style="float: right;">ciao</div></div>
+                        <div class="stat">requirements<div style="float: right;">ciao</div></div>
+                        <div class="stat">scale<div style="float: right;">ciao</div></div>
+                        <div class="stat">weight<div style="float: right;">ciao</div></div>
+                    </div>
+                </div>
+
                 <table class="w_name"><tr><td>moai</td></tr></table>
-                <div class="expanded">
-                    <div class="ext_bor"><img src="img/corner.png"></div>
-                    i'm a text
+                
+                <div class="expanded closed">
+                    <div class="statContainer">damage
+                        <div class="statCategories">
+                            <div style="background-color: #949494;">physic<br>58</div>
+                            <div style="background-color: #955b9b;">magic<br>56</div>
+                            <div style="background-color: #ee8229;">fire<br>56</div>
+                            <div style="background-color: #d3c018;">lighting<br>56</div>
+                            <div style="background-color: #3c3ed8;">bonus<br>56</div>
+                        </div>
+                    </div>
+                    <div class="statContainer">defence
+                        <div class="statCategories">
+                            <div style="background-color: #949494;">physic<br>56</div>
+                            <div style="background-color: #955b9b;">magic<br>56</div>
+                            <div style="background-color: #ee8229;">fire<br>56</div>
+                            <div style="background-color: #d3c018;">lighting<br>56</div>
+                            <div style="background-color: #3c3ed8;">bonus<br>56</div>
+                        </div>
+                    </div>
+                    <div class="statContainer">effects
+                        <div class="statCategories">
+                            <div style="background-color: #811981;">poison<br>56</div>
+                            <div style="background-color: #a83131;">bleed<br>56</div>
+                            <div style="background-color: #a7a7a7;">divine<br>56</div>
+                            <div style="background-color: #303030;">occult<br>56</div>
+                        </div>
+                    </div>
                 </div>
             </div>!-->
-
         </div>
     </body>
 
@@ -34,6 +67,7 @@
     <script>
         isFirst=true;
         var lastSelected;
+        var lastSelectedWeap;
 
         function addCategoryUI(name)
         {
@@ -56,15 +90,58 @@
             $("#categories_weapons").append("<div class='dummy_element_weapon'></div>");
 
             data.forEach(item => {
-                if(item.category==cat_name) { addWeaponUI(item.image,item.name) }     
+                if(item.category==cat_name) { addWeaponUI(item) }     
             });
 
             lastSelected=$(".element_category")
+            lastSelectedWeap=null
         }
 
-        function addWeaponUI(img,name)
+        function addWeaponUI(item)
         {
-            $("#categories_weapons").append("<div class='element_weapon'> <img class='image_weapon' alt='the link is broken' onerror=this.src='img/ater.png' src="+img+"> <table class='w_name'><tr><td>"+name+"</td></tr></table> </div>")
+            console.log(item);
+            $("#categories_weapons").append(
+                "<div class='element_weapon'>"+
+                    "<div style='display: flex;'>"+
+                        "<img class='image_weapon' alt='the link is broken' onerror=this.src='img/ater.png' src="+item.image+">"+
+                        "<div class='mainStats'>"+
+                            "<div class='stat closed'>attack type<div style='float: right;'>"+item.attackTypes+"</div></div>"+
+                            "<div class='stat closed'>requirements<div style='float: right;'>"+item.req+"</div></div>"+
+                            "<div class='stat closed'>scale<div style='float: right;'>"+item.scale+"</div></div>"+
+                            "<div class='stat closed'>weight<div style='float: right;'>"+item.weight+"</div></div>"+
+                        "</div>"+
+                    "</div>"+
+                    "<table class='w_name'><tr><td>"+item.name+"</td></tr></table>"+
+                    "<div class='expanded closed'>"+
+                        "<div class='statContainer'>damage"+
+                            "<div class='statCategories'>"+
+                                "<div style='background-color: #949494;'>physic<br>"+(item.atk.physical===undefined?"-":item.atk.physical)+"</div>"+
+                                "<div style='background-color: #955b9b;'>magic<br>"+(item.atk.magic===undefined?"-":item.atk.magic)+"</div>"+
+                                "<div style='background-color: #ee8229;'>fire<br>"+(item.atk.fire===undefined?"-":item.atk.fire)+"</div>"+
+                                "<div style='background-color: #d3c018;'>lighting<br>"+(item.atk.lightning===undefined?"-":item.atk.lightning)+"</div>"+
+                                "<div style='background-color: #3c3ed8;'>bonus<br>"+(item.atk.bonus===undefined?"-":item.atk.bonus)+"</div>"+
+                            "</div>"+
+                        "</div>"+
+                        "<div class='statContainer'>defence"+
+                            "<div class='statCategories'>"+
+                                "<div style='background-color: #949494;'>physic<br>"+(item.def.physical===undefined?"-":item.def.physical)+"</div>"+
+                                "<div style='background-color: #955b9b;'>magic<br>"+(item.def.magic===undefined?"-":item.def.magic)+"</div>"+
+                                "<div style='background-color: #ee8229;'>fire<br>"+(item.def.fire===undefined?"-":item.def.fire)+"</div>"+
+                                "<div style='background-color: #d3c018;'>lighting<br>"+(item.def.lightning===undefined?"-":item.def.lightning)+"</div>"+
+                                "<div style='background-color: #3c3ed8;'>bonus<br>"+(item.def.bonus===undefined?"-":item.def.bonus)+"</div>"+
+                            "</div>"+
+                        "</div>"+
+                        "<div class='statContainer'>effects"+
+                            "<div class='statCategories'>"+
+                                "<div style='background-color: #811981;'>poison<br>"+(item.effects.poison===null?"-":item.effects.poison)+"</div>"+
+                                "<div style='background-color: #a83131;'>bleed<br>"+(item.effects.bleed===null?"-":item.effects.bleed)+"</div>"+
+                                "<div style='background-color: #a7a7a7;'>divine<br>"+(item.effects.divine===null?"-":item.effects.divine)+"</div>"+
+                                "<div style='background-color: #303030;'>occult<br>"+(item.effects.occult===null?"-":item.effects.occult)+"</div>"+
+                            "</div>"+
+                        "</div>"+
+                    "</div>"+
+                "</div>"
+            );
         }
 
         $("document").ready(function() {
@@ -112,12 +189,12 @@
             
                 weap_Cont++    
             });
-                    
+  
+
             categories.forEach(item=>{
                 addCategoryUI(item.name)
             });
 
-            
             $(".element_category").click(function(){
                 $(lastSelected).removeClass("c_selected")
                 $(this).addClass("c_selected")
@@ -128,15 +205,28 @@
                 $("#categories_weapons").append("<div class='dummy_element_weapon'></div>");
 
                 data.forEach(item => {
-                    console.log(item)
+                    
                     if(item.category==cat_name)
                     {
-                        addWeaponUI(item.image,item.name)
+                        addWeaponUI(item)
                     }
                 });
 
                 lastSelected=this
-            });            
+            });  
+            
+            $("body").on("click",".element_weapon",function(){
+                if(this!=lastSelectedWeap && lastSelectedWeap!=null)
+                {
+                    $(lastSelectedWeap).removeClass("c_selected_w")
+                    $(lastSelectedWeap).find(".expanded").addClass("closed")
+                    $(lastSelectedWeap).find(".mainStats .stat").addClass("closed")
+                }
+
+                $(this).addClass("c_selected_w")
+                $(this).find("div").removeClass("closed")
+                lastSelectedWeap=this;                
+            });
         });
     </script>
 </html>
